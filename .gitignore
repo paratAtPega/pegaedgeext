@@ -1,0 +1,8 @@
+node_modules
+coverage
+test_results
+dist
+.sandbox
+.entries
+reactor-extension-pega-cdh-connector-edge-*.tgz
+package-pega-cdh-connector-*.zip

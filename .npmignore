@@ -1,0 +1,9 @@
+__tests__
+src/view
+createEntryFile.js
+\.*
+reactor-extension-pega-cdh-connector-edge-*.tgz
+coverage
+jest.config.js
+webpack.config.js
+package-pega-cdh-connector-*.zip
