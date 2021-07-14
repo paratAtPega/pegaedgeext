@@ -1,15 +1,29 @@
-export default (settings) => {
+export default (initInfo) => {
+  const { settings } = initInfo;
+  const {
+    eventName = '',
+    eventTime = '',
+    eventType = '',
+    pageType = '',
+    pageLocation = '',
+    pageViewActiveTime = '',
+    interestLevel = '',
+    interestedIn = '',
+    deviceType = '',
+    customerId = '',
+    cookieId = ''
+  } = settings || {};
   return {
-    eventName: settings?.eventName || 'PageView',
-    eventTime: settings?.eventTime || '',
-    eventType: settings?.eventType || '',
-    pageType: settings?.pageType || '',
-    pageLocation: settings?.pageLocation || '',
-    pageViewActiveTime: settings?.pageViewActiveTime || '',
-    interestLevel: settings?.interestLevel || '',
-    interestedIn: settings?.interestedIn || '',
-    deviceType: settings?.deviceType || '',
-    customerId: settings?.customerId || '',
-    cookieId: settings?.cookieId || ''
+    eventName,
+    eventTime,
+    eventType,
+    pageType,
+    pageLocation,
+    pageViewActiveTime,
+    interestLevel,
+    interestedIn,
+    deviceType,
+    customerId,
+    cookieId
   };
 };

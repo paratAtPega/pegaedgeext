@@ -1,5 +1,5 @@
 import React from 'react';
-//import { useFormContext } from 'react-hook-form';
+import { useFormContext } from 'react-hook-form';
 import {
   Content,
   Divider,
@@ -13,6 +13,7 @@ import WrappedTextField from '../../components/wrappedTextField';
 import Parameters from './getParameters';
 
 export default () => {
+  const { watch } = useFormContext();
   const { Summaries } = Parameters();
 
   const pegaEventSetupText = `Use the data mapping to configure a Pega Customer Decision
@@ -21,37 +22,35 @@ export default () => {
   const eventsParametersText = 'Send actions that occur as a Standard Event.';
 
   return (
-    <>
-      <Flex direction="row" gap="size-200">
-        <Flex direction="column" gap="size-65">
-          <Heading> Pega CDH Stream Event Setup </Heading>
-          <Divider size="S" />
-          <Content>
-            <Text>{pegaEventSetupText}</Text>
+    <Flex direction="row" gap="size-200">
+      <Flex direction="column" gap="size-65">
+        <Heading> Pega CDH Stream Event Setup </Heading>
+        <Divider size="S" />
+        <Content>
+          <Text>{pegaEventSetupText}</Text>
+        </Content>
+
+        <Heading marginTop="1em">Event Parameters</Heading>
+        <Divider size="S" />
+        <Content>
+          <Content marginBottom="1em">
+            <Text>{eventsParametersText}</Text>
           </Content>
 
-          <Heading marginTop="1em">Event Parameters</Heading>
-          <Divider size="S" />
-          <Content>
-            <Content marginBottom="1em">
-              <Text>{eventsParametersText}</Text>
-            </Content>
-
-            {Summaries.map(([name, label], index) => {
-              return (
-                <WrappedTextField
-                  key={index}
-                  name={name}
-                  component={TextField}
-                  width="size-4600"
-                  label={label}
-                  supportDataElement
-                />
-              );
-            })}
-          </Content>
-        </Flex>
+          {Summaries.map(([name, label], index) => {
+            return (
+              <WrappedTextField
+                key={index}
+                name={name}
+                component={TextField}
+                width="size-4600"
+                label={label}
+                supportDataElement
+              />
+            );
+          })}
+        </Content>
       </Flex>
-    </>
+    </Flex>
   );
 };
