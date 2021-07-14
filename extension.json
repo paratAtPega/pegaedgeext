@@ -49,10 +49,14 @@
           "eventName": {
             "type": "string",
             "minLength": 1
+          },
+          "eventTime": {
+            "type": "string",
+            "minLength": 1
           }
         },
         "additionalProperties": false,
-        "required": ["eventName"]
+        "required": ["eventName","eventTime"]
       }
     }
   ]

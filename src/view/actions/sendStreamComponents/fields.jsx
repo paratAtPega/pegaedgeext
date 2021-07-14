@@ -1,5 +1,5 @@
 import React from 'react';
-import { useFormContext } from 'react-hook-form';
+
 import {
   Content,
   Divider,
@@ -13,7 +13,6 @@ import WrappedTextField from '../../components/wrappedTextField';
 import Parameters from './getParameters';
 
 export default () => {
-  const { watch } = useFormContext();
   const { Summaries } = Parameters();
 
   const pegaEventSetupText = `Use the data mapping to configure a Pega Customer Decision
@@ -37,10 +36,9 @@ export default () => {
             <Text>{eventsParametersText}</Text>
           </Content>
 
-          {Summaries.map(([name, label], index) => {
+          {Summaries.map(([name, label]) => {
             return (
               <WrappedTextField
-                key={index}
                 name={name}
                 component={TextField}
                 width="size-4600"

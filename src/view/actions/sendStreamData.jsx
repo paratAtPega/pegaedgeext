@@ -9,7 +9,7 @@ import validateSendEventFields from './sendStreamComponents/validate';
 
 export default () => (
   <ExtensionView
-    getInitialValues={(initInfo) => ({
+    getInitialValues={({ initInfo }) => ({
       ...getSendEventInitValues(initInfo)
     })}
     getSettings={({ values }) => ({
