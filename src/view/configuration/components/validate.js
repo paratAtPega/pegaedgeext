@@ -2,13 +2,8 @@ export default (values) => {
   const errors = {};
 
   if (!values.url) {
-    errors.url = {
-      message: 'Please provide Clickstream Service Endpoint URL',
-      type: 'required'
-    };
-  }
-
-  if (
+    errors.url = 'Please provide Clickstream Service Endpoint URL';
+  } else if (
     !values.url.match(
       /https?:\/\/[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]+\b([-a-zA-Z0-9()@:%_+.~#?&//=]*)/
     )
@@ -17,10 +12,7 @@ export default (values) => {
   }
 
   if (!values.businessType) {
-    errors.businessType = {
-      message: 'Please specify your business type',
-      type: 'required'
-    };
+    errors.businessType = 'Please specify your business type';
   }
   return errors;
 };

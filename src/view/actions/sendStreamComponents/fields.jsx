@@ -9,7 +9,6 @@ import {
   TextField
 } from '@adobe/react-spectrum';
 import WrappedTextField from '../../components/wrappedTextField';
-//import WrappedCheckboxComponent from '../../components/wrappedCheckboxComponent';
 import Parameters from './getParameters';
 
 export default () => {

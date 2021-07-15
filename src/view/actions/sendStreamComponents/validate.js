@@ -1,17 +1,11 @@
 export default (values) => {
   const errors = {};
   if (!values.eventName) {
-    errors.eventName = {
-      message: 'Please specify an event name',
-      type: 'required'
-    };
+    errors.eventName = 'Please specify an event name';
   }
 
   if (!values.eventTime) {
-    errors.eventTime = {
-      message: 'Please specify then event Timestamp',
-      type: 'required'
-    };
+    errors.eventTime = 'Please specify then event Timestamp';
   }
 
   return errors;

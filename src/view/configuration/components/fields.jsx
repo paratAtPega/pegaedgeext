@@ -1,23 +1,10 @@
 import React from 'react';
-import {
-  // eslint-disable-next-line no-unused-vars
-  Checkbox,
-  Flex,
-  Item,
-  Picker,
-  // eslint-disable-next-line no-unused-vars
-  Radio,
-  // eslint-disable-next-line no-unused-vars
-  RadioGroup,
-  // eslint-disable-next-line no-unused-vars
-  TextField
-} from '@adobe/react-spectrum';
+import { Flex, Item, Picker } from '@adobe/react-spectrum';
 import { Controller, useFormContext } from 'react-hook-form';
 import WrappedTextField from '../../components/wrappedTextField';
 
 export default () => {
-  // eslint-disable-next-line no-unused-vars
-  const { setValue, control } = useFormContext();
+  const { control } = useFormContext();
 
   return (
     <Flex direction="column" gap="size-65">

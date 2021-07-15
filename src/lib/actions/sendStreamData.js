@@ -4,13 +4,25 @@ var shaHashingHelper = require('./shaHashingHelper');
 
 module.exports = function ({ utils, arc }) {
   const { getExtensionSettings, getSettings, fetch, logger } = utils;
-  const url = 'https://pega.com';
+  const { url, businessType } = getExtensionSettings();
 
   return fetch(url, buildEventBody(getSettings));
 };
 
 function buildEventBody(getSettings) {
-  const { eventName } = getSettings();
+  const {
+    eventName,
+    eventTime,
+    eventType,
+    pageType,
+    pageLocation,
+    pageViewActiveTime,
+    interestLevel,
+    interestedIn,
+    deviceType,
+    customerId,
+    cookieId
+  } = getSettings();
   const methodValue = 'POST';
   const contentTypeValue = 'application/json';
   const agentValue = 'adobe_launch';
@@ -21,13 +33,17 @@ function buildEventBody(getSettings) {
       'content-type': contentTypeValue
     },
     body: JSON.stringify({
-      data: [
-        {
-          event_name: eventName
-        }
-      ],
-      // eslint-disable-next-line camelcase
-      partner_agent: agentValue
+      Event: eventName,
+      EventTimestamp: eventTime,
+      EventType: eventType,
+      PageType: pageType,
+      PageLocation: pageLocation,
+      PageViewActiveTime: pageViewActiveTime,
+      InterestLevel: interestLevel,
+      InterestedIn: interestedIn,
+      DeviceType: deviceType,
+      CustomerId: customerId,
+      CookieId: cookieId
     })
   };
 }
