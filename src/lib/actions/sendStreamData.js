@@ -42,8 +42,8 @@ function buildEventBody(getSettings) {
       InterestLevel: interestLevel,
       InterestedIn: interestedIn,
       DeviceType: deviceType,
-      CustomerId: customerId,
-      CookieId: cookieId
+      CustomerID: customerId,
+      CookieID: cookieId
     })
   };
 }

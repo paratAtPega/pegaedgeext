@@ -3,7 +3,7 @@
   "name": "pega-customer-decision-hub-connector",
   "iconPath": "resources/icons/pega-logo.svg",
   "version": "1.0.0",
-  "description": "Server side extension that allows users to send data to Pega Customer Decision.",
+  "description": "Server side extension that allows users to send data to Pega Customer Decision Hub.",
   "author": {
     "name": "Pegasystems",
     "url": "http://pega.com"
