@@ -1,8 +1,7 @@
 export default (initInfo) => {
   const { settings } = initInfo;
-  const { url = '', businessType = '' } = settings || {};
+  const { url = '' } = settings || {};
   return {
-    url,
-    businessType
+    url
   };
 };

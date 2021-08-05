@@ -10,9 +10,5 @@ export default (values) => {
   ) {
     errors.url = 'Please provide a valid URL';
   }
-
-  if (!values.businessType) {
-    errors.businessType = 'Please specify your business type';
-  }
   return errors;
 };

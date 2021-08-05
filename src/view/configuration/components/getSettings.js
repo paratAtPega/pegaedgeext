@@ -1,1 +1,1 @@
-export default ({ url, businessType }) => ({ url, businessType });
+export default ({ url }) => ({ url });

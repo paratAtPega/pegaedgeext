@@ -10,7 +10,7 @@
   },
   "platform": "edge",
   "viewBasePath": "dist/",
- "configuration": {
+  "configuration": {
     "viewPath": "configuration/configuration.html",
     "schema": {
       "$schema": "http://json-schema.org/draft-04/schema#",
@@ -20,23 +20,13 @@
           "type": "string",
           "minLength": 1,
           "pattern": "https?:\\/\\/[-a-zA-Z0-9@:%._+~#=]{1,256}\\.[a-zA-Z0-9()]+\\b([-a-zA-Z0-9()@:%_+.~#?&//=]*)"
-        },
-        "businessType": {
-          "type": "string",
-          "minLength": 1,
-          "enum": [
-            "Financial",
-            "Health",
-            "Insurance"
-          ]
         }
       },
       "additionalProperties": false,
-      "required": ["url","businessType"]
+      "required": ["url"]
     }
   },
   "actions": [
-
     {
       "displayName": "Send Stream API Event",
       "name": "send-stream-data",
@@ -46,17 +36,13 @@
         "$schema": "http://json-schema.org/draft-04/schema#",
         "type": "object",
         "properties": {
-          "eventName": {
-            "type": "string",
-            "minLength": 1
-          },
-          "eventTime": {
+          "customerId": {
             "type": "string",
             "minLength": 1
           }
         },
         "additionalProperties": true,
-        "required": ["eventName","eventTime"]
+        "required": ["customerId"]
       }
     }
   ]
