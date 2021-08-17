@@ -2,8 +2,8 @@
   "displayName": "Pega Connector for Customer Decision Hub",
   "name": "pega-connector-for-customer-decision-hub",
   "iconPath": "resources/icons/pega-logo.svg",
-  "version": "1.0.0",
-  "description": "Server side extension that allows users to send data to Pega Customer Decision Hub.",
+  "version": "1.0.1",
+  "description": "This server side extension allows you to capture and forward customer digital behavior data to Pega’s Customer Decision Hub for use in determining Next-Best-Actions.",
   "author": {
     "name": "Pegasystems",
     "url": "http://pega.com"

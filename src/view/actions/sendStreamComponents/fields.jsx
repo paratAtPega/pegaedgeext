@@ -20,11 +20,11 @@ import getEmptyBodyJson from './getEmptyValue';
 export default () => {
   const { Summaries } = Parameters();
 
-  const pegaEventSetupText = `Use the data mapping to configure a Pega Customer Decision
-   Hub clickstream event using your data from Adobe Edge. 
-   These events will be sent to Pega CDH ClickStream API configured.`;
+  // eslint-disable-next-line max-len
+  const pegaEventSetupText = `Configure the mapping of captured digital behavior events, on your digital property, to the expected behavioral data entities needed by Pega Customer Decision Hub.`;
   const eventsParametersText =
-    'Send actions that occur as a clickstream event. For more detail, see the ';
+    // eslint-disable-next-line max-len
+    'Associate the Pega Customer Decision Hub clickstream event data entities to your collected data entities. For more details, see the ';
   const customerInformationURI =
     'https://community.pega.com/knowledgebase/articles/customer-profile-designer-accelerator-component-user-guide/86/customer-profile-designer-accelerator-component';
 
@@ -35,13 +35,13 @@ export default () => {
   return (
     <Flex direction="row" gap="size-200">
       <Flex direction="column" gap="size-65">
-        <Heading> Pega CDH Stream Event Setup </Heading>
+        <Heading> Pega Customer Decision Hub Data Mapping Setup </Heading>
         <Divider size="S" />
         <Content>
           <Text>{pegaEventSetupText}</Text>
         </Content>
 
-        <Heading marginTop="1em">Event Parameters</Heading>
+        <Heading marginTop="1em">Data Mappings</Heading>
         <Divider size="S" />
         <Content>
           <Content marginBottom="1em">
@@ -49,9 +49,10 @@ export default () => {
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <Link>
               <a href={customerInformationURI} target="_blank" rel="noreferrer">
-                documentation.
+                documentation
               </a>
             </Link>
+            <Text>.</Text>
           </Content>
 
           {Summaries.map(([name, label]) => {
