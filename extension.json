@@ -8,6 +8,7 @@
     "name": "Pegasystems",
     "url": "http://pega.com"
   },
+  "exchangeUrl": "https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.107597.html",
   "platform": "edge",
   "viewBasePath": "dist/",
   "configuration": {
