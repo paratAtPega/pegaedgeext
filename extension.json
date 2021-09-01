@@ -6,9 +6,10 @@
   "description": "This server side extension allows you to capture and forward customer digital behavior data to Pega’s Customer Decision Hub for use in determining Next-Best-Actions.",
   "author": {
     "name": "Pegasystems",
-    "url": "http://pega.com"
+    "url": "https://www.pega.com",
+    "email": "Tony.Parakka@pega.com"
   },
-  "exchangeUrl": "https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.107597.html",
+  "exchangeUrl": "https://exchange.adobe.com/experiencecloud.details.107597.html",
   "platform": "edge",
   "viewBasePath": "dist/",
   "configuration": {
